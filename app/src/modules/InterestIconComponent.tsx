@@ -40,13 +40,13 @@ const InterestIconComponent: React.FC<InterestIconProps> = ({ interests }) => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20,
+        padding: 0,
     },
     interestItem: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 10,
-        marginRight: 30,
+        marginBottom: 0,
+        marginRight: 20,
     },
     interestText: {
         marginLeft: 10,
