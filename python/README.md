@@ -1,0 +1,2 @@
+## How to use this scripts
+**restaurantDataGenerator.py** takes cities.csv and with a place_type as an argument, this script will create a subfolder in data with name **place_type** an inside all cities_place_type.csv with all info about that place
