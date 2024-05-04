@@ -28,7 +28,11 @@ function Section({ title, children }: PropsWithChildren<SectionProps>) {
     return (
         <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>{title}</Text>
-            <Text style={styles.sectionDescription}>{children}</Text>
+            {
+                children
+                    ? <Text style={styles.sectionDescription}>{children}</Text>
+                    : undefined
+            }
         </View>
     );
 }
