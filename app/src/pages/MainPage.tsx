@@ -17,7 +17,7 @@ function MainPage({ navigation }) {
 
     return (
         <View>
-            <Section title="Upcoming trips" />
+            <Section title="Your upcoming trips" />
             <ScrollView style={{ marginTop: 10 }}>
                 {trips.map((trip, index) => (
                     <TripCard key={index} trip={trip} navigation={navigation} />
