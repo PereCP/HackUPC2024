@@ -27,10 +27,36 @@ class DataManager:
     def get_trips_days(self, trip):
         return datetime.strptime(trip['Return Date'], '%d/%m/%Y') - datetime.strptime(trip['Departure Date'], '%d/%m/%Y')
     
-    def get_others_trips_as_trip(self, trip, name):
+    def calculate_overlap(trip1, trips):
+        departure_date1 = datetime.strptime(trip1['Departure Date'], '%d/%m/%Y')
+        return_date1 = datetime.strptime(trip1['Return Date'], '%d/%m/%Y')
+
+        overlap_trips = []
+        for i in range(i+1, len(trips)):
+            trip2 = trips[i]
+            
+            # Convert string dates to datetime objects
+            departure_date2 = datetime.strptime(trip2['Departure Date'], '%d/%m/%Y')
+            return_date2 = datetime.strptime(trip2['Return Date'], '%d/%m/%Y')
+
+            if departure_date1 < return_date2 and departure_date2 < return_date1:
+                overlap_start = max(departure_date1, departure_date2)
+                overlap_end = min(return_date1, return_date2)
+                overlap_days = (overlap_end - overlap_start).days + 1
+                overlap_trips.append((trip2,overlap_days))
+
+        return overlap_trips
+
+    def get_overlaped_trips_as_trip(self, trip, name):
         #get all the trips to the city exluding his
-        alltrips_to_city = self.data.get_trips_by_arrival_city(trip['Arrival City'], name)
-        #check if dates match
+        all_trips_to_city = self.data[(self.data['Arrival City'] == trip['Arrival City']) & (self.data['Traveller Name'] != name)]
         
+        #print("all trips to same city")
+        #print(all_trips_to_city)
+        #check if dates match
+        overlap_trips = self.calculate_overlap(trip, all_trips_to_city)
+        return overlap_trips
+        
+    
 
 
