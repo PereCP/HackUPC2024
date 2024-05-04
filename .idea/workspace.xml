@@ -5,70 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c7b0ec2-a7a9-4115-b5aa-f06c14dcbb5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.bundle/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.watchmanconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/debug.keystore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/hackupc/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/hackupc/MainApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/rn_edit_text_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/.xcode.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc.xcodeproj/xcshareddata/xcschemes/hackupc.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/AppDelegate.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/Images.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/LaunchScreen.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/PrivacyInfo.xcprivacy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupc/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupcTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/hackupcTests/hackupcTests.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/java/com/hackupc/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/java/com/hackupc/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/java/com/hackupc/MainApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/java/com/hackupc/MainApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/hackupc.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/hackupc.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/hackupc/AppDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/hackupc/AppDelegate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/hackupc/AppDelegate.mm" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/hackupc/AppDelegate.mm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/hackupc/PrivacyInfo.xcprivacy" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/hackupc/PrivacyInfo.xcprivacy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/metro.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/metro.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,10 +34,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2fzrBiVCxH2BWhihT2JMhRujHvE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -98,7 +51,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "pere",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }

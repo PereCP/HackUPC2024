@@ -11,10 +11,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		4E0D1D5CA94637AC50FD5D77 /* libPods-hackupc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136656D63F3C4531A92C25CD /* libPods-hackupc.a */; };
+		3D159C0B6F7902CD137CD7C2 /* libPods-hackupc-hackupcTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC20E4AB915A9DD1E4CF25F /* libPods-hackupc-hackupcTests.a */; };
+		42D712FBBBE368D454629A7F /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A70A72B1CDE30A9F9BEE6 /* ExpoModulesProvider.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9EBEA8971944FE5C461BD0C5 /* libPods-hackupc-hackupcTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8C43022C70AF8B48EBFDD0 /* libPods-hackupc-hackupcTests.a */; };
+		B3FB1D552B723B44E1A71708 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5152A92C02F024B3AA2FA9D8 /* ExpoModulesProvider.swift */; };
 		E294C40F9BC06493EF9EBD00 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 91AA38ABF9E7E01CB8D3DFAA /* PrivacyInfo.xcprivacy */; };
+		EEE429248BD323F520CE72A7 /* libPods-hackupc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 161366BBDFBE85070AD86EAF /* libPods-hackupc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,6 @@
 		00E356EE1AD99517003FC87E /* hackupcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackupcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* hackupcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackupcTests.m; sourceTree = "<group>"; };
-		136656D63F3C4531A92C25CD /* libPods-hackupc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hackupc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* hackupc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackupc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = hackupc/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = hackupc/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,13 +40,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = hackupc/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = hackupc/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = hackupc/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		16F2DFE8C140696BB9B02B87 /* Pods-hackupc-hackupcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc-hackupcTests.release.xcconfig"; path = "Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests.release.xcconfig"; sourceTree = "<group>"; };
-		3DA7E17A5AF41ADCB2608982 /* Pods-hackupc-hackupcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc-hackupcTests.debug.xcconfig"; path = "Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B8C43022C70AF8B48EBFDD0 /* libPods-hackupc-hackupcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hackupc-hackupcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D4C1654F16D2BCF06293C66 /* Pods-hackupc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc.release.xcconfig"; path = "Target Support Files/Pods-hackupc/Pods-hackupc.release.xcconfig"; sourceTree = "<group>"; };
+		161366BBDFBE85070AD86EAF /* libPods-hackupc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hackupc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D039AEE892E1C6B33F5B60 /* Pods-hackupc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc.release.xcconfig"; path = "Target Support Files/Pods-hackupc/Pods-hackupc.release.xcconfig"; sourceTree = "<group>"; };
+		1FC5488FB09DDFB8F696DD40 /* Pods-hackupc-hackupcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc-hackupcTests.debug.xcconfig"; path = "Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AC20E4AB915A9DD1E4CF25F /* libPods-hackupc-hackupcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hackupc-hackupcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5152A92C02F024B3AA2FA9D8 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-hackupc/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		67DB9F5C3B1DA3B4A9CB8C8D /* Pods-hackupc-hackupcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc-hackupcTests.release.xcconfig"; path = "Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests.release.xcconfig"; sourceTree = "<group>"; };
+		770A70A72B1CDE30A9F9BEE6 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-hackupc-hackupcTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = hackupc/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91AA38ABF9E7E01CB8D3DFAA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = hackupc/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		A021C798A9AE77827EDB3C0E /* Pods-hackupc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc.debug.xcconfig"; path = "Target Support Files/Pods-hackupc/Pods-hackupc.debug.xcconfig"; sourceTree = "<group>"; };
+		EB29064F470200A9072EC233 /* Pods-hackupc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackupc.debug.xcconfig"; path = "Target Support Files/Pods-hackupc/Pods-hackupc.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -54,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBEA8971944FE5C461BD0C5 /* libPods-hackupc-hackupcTests.a in Frameworks */,
+				3D159C0B6F7902CD137CD7C2 /* libPods-hackupc-hackupcTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0D1D5CA94637AC50FD5D77 /* libPods-hackupc.a in Frameworks */,
+				EEE429248BD323F520CE72A7 /* libPods-hackupc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,14 +105,31 @@
 			name = hackupc;
 			sourceTree = "<group>";
 		};
+		1A1A863DFE94B2E2F9053A74 /* hackupc */ = {
+			isa = PBXGroup;
+			children = (
+				5152A92C02F024B3AA2FA9D8 /* ExpoModulesProvider.swift */,
+			);
+			name = hackupc;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				136656D63F3C4531A92C25CD /* libPods-hackupc.a */,
-				5B8C43022C70AF8B48EBFDD0 /* libPods-hackupc-hackupcTests.a */,
+				161366BBDFBE85070AD86EAF /* libPods-hackupc.a */,
+				4AC20E4AB915A9DD1E4CF25F /* libPods-hackupc-hackupcTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D54201ECCEA828510A6792B /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				1A1A863DFE94B2E2F9053A74 /* hackupc */,
+				B990D62CAEA32642B0F13602 /* hackupcTests */,
+			);
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -127,6 +148,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				4D54201ECCEA828510A6792B /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -142,13 +164,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B990D62CAEA32642B0F13602 /* hackupcTests */ = {
+			isa = PBXGroup;
+			children = (
+				770A70A72B1CDE30A9F9BEE6 /* ExpoModulesProvider.swift */,
+			);
+			name = hackupcTests;
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A021C798A9AE77827EDB3C0E /* Pods-hackupc.debug.xcconfig */,
-				7D4C1654F16D2BCF06293C66 /* Pods-hackupc.release.xcconfig */,
-				3DA7E17A5AF41ADCB2608982 /* Pods-hackupc-hackupcTests.debug.xcconfig */,
-				16F2DFE8C140696BB9B02B87 /* Pods-hackupc-hackupcTests.release.xcconfig */,
+				EB29064F470200A9072EC233 /* Pods-hackupc.debug.xcconfig */,
+				17D039AEE892E1C6B33F5B60 /* Pods-hackupc.release.xcconfig */,
+				1FC5488FB09DDFB8F696DD40 /* Pods-hackupc-hackupcTests.debug.xcconfig */,
+				67DB9F5C3B1DA3B4A9CB8C8D /* Pods-hackupc-hackupcTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -160,12 +190,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "hackupcTests" */;
 			buildPhases = (
-				C3D612D76A000E8794AA479D /* [CP] Check Pods Manifest.lock */,
+				EE930105600494F6FF0B7CE5 /* [CP] Check Pods Manifest.lock */,
+				FEB4B8839E4AA99BD4F8D54E /* [Expo] Configure project */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				88AE766BF3236DDDC90DC6FF /* [CP] Embed Pods Frameworks */,
-				1562866AB296BEFAD0772521 /* [CP] Copy Pods Resources */,
+				0F44B4B8A1C609563CE0255B /* [CP] Embed Pods Frameworks */,
+				E3BBEAE8F8764565EEE8702A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,13 +212,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "hackupc" */;
 			buildPhases = (
-				E1F7A8327C16DC0B19466926 /* [CP] Check Pods Manifest.lock */,
+				3EB532AC498E614D5C87B780 /* [CP] Check Pods Manifest.lock */,
+				A79A472A176BBE02A66C1A26 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				6A1AE31304EA75E3BFC9369E /* [CP] Embed Pods Frameworks */,
-				17A4FEB8D9BAE0D5C58924CC /* [CP] Copy Pods Resources */,
+				3351FAE80D9FB137DBDD6278 /* [CP] Embed Pods Frameworks */,
+				722986E6B85B7C6E4318D24D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,60 +301,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli')\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n`\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n";
 		};
-		1562866AB296BEFAD0772521 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		17A4FEB8D9BAE0D5C58924CC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A1AE31304EA75E3BFC9369E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88AE766BF3236DDDC90DC6FF /* [CP] Embed Pods Frameworks */ = {
+		0F44B4B8A1C609563CE0255B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,29 +320,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C3D612D76A000E8794AA479D /* [CP] Check Pods Manifest.lock */ = {
+		3351FAE80D9FB137DBDD6278 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-hackupc-hackupcTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1F7A8327C16DC0B19466926 /* [CP] Check Pods Manifest.lock */ = {
+		3EB532AC498E614D5C87B780 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,6 +359,100 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		722986E6B85B7C6E4318D24D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc/Pods-hackupc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79A472A176BBE02A66C1A26 /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-hackupc/expo-configure-project.sh\"\n";
+		};
+		E3BBEAE8F8764565EEE8702A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackupc-hackupcTests/Pods-hackupc-hackupcTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE930105600494F6FF0B7CE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hackupc-hackupcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB4B8839E4AA99BD4F8D54E /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-hackupc-hackupcTests/expo-configure-project.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -391,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* hackupcTests.m in Sources */,
+				42D712FBBBE368D454629A7F /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +471,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B3FB1D552B723B44E1A71708 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +488,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DA7E17A5AF41ADCB2608982 /* Pods-hackupc-hackupcTests.debug.xcconfig */;
+			baseConfigurationReference = 1FC5488FB09DDFB8F696DD40 /* Pods-hackupc-hackupcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -435,6 +507,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackupc.app/hackupc";
@@ -443,7 +516,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F2DFE8C140696BB9B02B87 /* Pods-hackupc-hackupcTests.release.xcconfig */;
+			baseConfigurationReference = 67DB9F5C3B1DA3B4A9CB8C8D /* Pods-hackupc-hackupcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -459,6 +532,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hackupc.app/hackupc";
@@ -467,7 +541,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A021C798A9AE77827EDB3C0E /* Pods-hackupc.debug.xcconfig */;
+			baseConfigurationReference = EB29064F470200A9072EC233 /* Pods-hackupc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -484,6 +558,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = hackupc;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -494,7 +569,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D4C1654F16D2BCF06293C66 /* Pods-hackupc.release.xcconfig */;
+			baseConfigurationReference = 17D039AEE892E1C6B33F5B60 /* Pods-hackupc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -510,6 +585,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = hackupc;
 				SWIFT_VERSION = 5.0;
