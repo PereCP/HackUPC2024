@@ -5,6 +5,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import TripDetail from 'src/pages/TripDetail';
+import TripOverlaps from './TripOverlaps';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +16,7 @@ function TripPage({ route, navigation }) {
         <Tab.Navigator screenOptions={
             ({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
-                    let iconName = route.name === 'TripDetails' ? 'plane' : 'paper-plane';
+                    let iconName = route.name === 'Info' ? 'info-circle' : 'users';
                     let iconColor = focused ? 'tomato' : 'gray';
 
                     return <FontAwesome name={iconName} size={24} color={iconColor} />;
@@ -24,11 +25,11 @@ function TripPage({ route, navigation }) {
                 tabBarInactiveTintColor: 'gray',
                 headerShown: false,
             })}>
-            <Tab.Screen name="TripDetails">
+            <Tab.Screen name="Info">
                 {() => <TripDetail trip={trip} />}
             </Tab.Screen>
-            <Tab.Screen name="TripDetails2">
-                {() => <TripDetail trip={trip} />}
+            <Tab.Screen name="Networking">
+                {() => <TripOverlaps trip={trip} />}
             </Tab.Screen>
         </ Tab.Navigator>
     );

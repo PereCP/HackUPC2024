@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Pressable, ImageBackground } from "react-native";
+import { StyleSheet, View, Pressable, Image } from "react-native";
 
 import Section from "src/modules/Section";
 import { Trip } from "src/modules/infrastructure/Trips";
@@ -10,10 +10,15 @@ const styles = StyleSheet.create({
         margin: 10,
         backgroundColor: 'white',
         borderRadius: 20,
+        alignContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     backgroundImage: {
-        height: 150,
-        borderRadius: 20,
+        width: 125,
+        height: 125,
+        borderTopRightRadius: 20,
+        borderBottomRightRadius: 20,
         overflow: "hidden",
     }
 });
@@ -26,11 +31,10 @@ function TripCard({ trip, navigation }: TripCardProps | any) {
     return (
         <Pressable onPress={() => navigation.navigate('Details', { trip: trip })}>
             <View style={styles.tripCard}>
-                <ImageBackground source={{ uri: trip.image }} style={styles.backgroundImage} resizeMode={'cover'}>
-                    <Section title={trip.city} >
-                        {trip.departureDate} - {trip.returnDate}
-                    </Section>
-                </ImageBackground>
+                <Section title={trip.city} >
+                    {trip.departureDate} - {trip.returnDate}
+                </Section>
+                <Image source={{ uri: trip.image }} style={styles.backgroundImage} />
             </View>
         </Pressable>
     );
