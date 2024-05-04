@@ -1,7 +1,7 @@
-from geopy.geocoders import Nominatim
+from geopy.geocoders import Photon
 
 def obtener_coordenadas(ciudad):
-    geolocalizador = Nominatim(user_agent="myGeocoder")
+    geolocalizador = Photon(user_agent="myGeocoder")
     ubicacion = geolocalizador.geocode(ciudad)
     if ubicacion:
         return ubicacion.latitude, ubicacion.longitude
@@ -12,4 +12,4 @@ def obtener_coordenadas(ciudad):
 ciudad = input("Ingrese el nombre de la ciudad: ")
 latitud, longitud = obtener_coordenadas(ciudad)
 if latitud is not None and longitud is not None:
-    print(f"Las coordenadas de {ciudad} son: Latitud {latitud}, Longitud {longitud}")
+    print(f"{latitud},{longitud}")
