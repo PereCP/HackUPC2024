@@ -2,9 +2,6 @@ import requests
 import json
 import pandas as pd
 from datetime import datetime
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
 
 # Carga las coordenadas al iniciar el servidor
 df_ciudades = pd.read_csv('data/cities.csv')
@@ -39,27 +36,4 @@ def obtener_eventos(lat, lon, start_date, end_date, access_token):
 def formatear_fecha(fecha_iso):
     return datetime.fromisoformat(fecha_iso.replace('Z', '+00:00')).strftime('%Y-%m-%d %H:%M')
 
-@app.route('/eventos', methods=['GET'])
-def eventos_endpoint():
-    ciudad = request.args.get('ciudad')
-    fecha_inicio = request.args.get('fecha_inicio')
-    fecha_fin = request.args.get('fecha_fin')
-    access_token = 'efqtARp36tMmH3YnFnvfUTEbeGd4JxvC6C7WSf5w'
-    
-    try:
-        lat, lon = obtener_coordenadas(ciudad)
-        eventos = obtener_eventos(lat, lon, fecha_inicio, fecha_fin, access_token)
-        eventos_procesados = [{
-            "Evento": evento['title'],
-            "Descripción": evento['description'],
-            "Categoría": evento['category'],
-            "Fecha de inicio": formatear_fecha(evento['start']),
-            "Ubicación": evento['entities'][0]['formatted_address'] if evento['entities'] else 'No especificado',
-            "Relevancia": evento['relevance']
-        } for evento in eventos]
-        return jsonify(eventos_procesados)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)  # Cambio a puerto 5001

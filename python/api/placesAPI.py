@@ -73,6 +73,6 @@ if __name__ == "__main__":
     # Drop rows with missing values
     df.dropna(inplace=True)
 
-    csv_filename = f'data/{place_type}/{city}_{place_type}.csv'
+    csv_filename = f'data/places/{city}_{place_type}.csv'
     df.to_csv(csv_filename, index=False)
     print(f"Data saved to {csv_filename}")

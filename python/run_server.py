@@ -1,5 +1,7 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import pandas as pd
+from api.hqAPIacces import *
+from placeDataGenerator import *
 
 app = Flask(__name__)
 
@@ -38,5 +40,39 @@ def get_trips():
     trips = df_travels_user.to_dict(orient='records')
 
     return {'trips': trips}
+
+@app.route('/eventos', methods=['GET'])
+def eventos_endpoint():
+    ciudad = request.args.get('ciudad')
+    fecha_inicio = request.args.get('fecha_inicio')
+    fecha_fin = request.args.get('fecha_fin')
+    access_token = 'efqtARp36tMmH3YnFnvfUTEbeGd4JxvC6C7WSf5w'
+    
+    try:
+        lat, lon = obtener_coordenadas(ciudad)
+        eventos = obtener_eventos(lat, lon, fecha_inicio, fecha_fin, access_token)
+        eventos_procesados = [{
+            "Evento": evento['title'],
+            "Descripción": evento['description'],
+            "Categoría": evento['category'],
+            "Fecha de inicio": formatear_fecha(evento['start']),
+            "Ubicación": evento['entities'][0]['formatted_address'] if evento['entities'] else 'No especificado',
+            "Relevancia": evento['relevance']
+        } for evento in eventos]
+        return jsonify(eventos_procesados)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+    
+@app.route('/search_places', methods=['GET'])
+def search_places_endpoint():
+    city = request.args.get('city')
+    place_type = request.args.get('place_type')
+    radius = '1000'
+    
+    getPlaceTypeData(city,place_type, radius)
+    
+    df_places= pd.read_csv(f'data/places/{city}_{place_type}.csv')
+    places = df_places.to_dict(orient='records')
+    return jsonify(places)
     
 app.run()
