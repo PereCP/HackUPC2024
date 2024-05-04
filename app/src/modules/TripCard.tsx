@@ -27,8 +27,8 @@ function TripCard({ trip, navigation }: TripCardProps | any) {
         <Pressable onPress={() => navigation.navigate('Details', { trip: trip })}>
             <View style={styles.tripCard}>
                 <ImageBackground source={{ uri: trip.image }} style={styles.backgroundImage} resizeMode={'cover'}>
-                    <Section title={trip.name} >
-                        {trip.description}
+                    <Section title={trip.city} >
+                        {trip.departureDate} - {trip.returnDate}
                     </Section>
                 </ImageBackground>
             </View>

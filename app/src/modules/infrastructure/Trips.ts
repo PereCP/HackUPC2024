@@ -1,16 +1,30 @@
+import { SERVER_URL } from "src/modules/infrastructure/Urls";
+
+const TRIPS_URL = `${SERVER_URL}/get_trips?traveller_name=AndersonHudson`;
+
 export type Trip = {
     id: string;
-    name: string;
+    city: string;
+    departureDate: string;
+    returnDate: string;
     description: string;
     image: string;
 };
 
-const trips = [
-    { "id": "paris", "name": "Paris", "description": "The city of love", "image": "https://picsum.photos/id/54/367/267" },
-    { "id": "barcelona", "name": "Barcelona", "description": "The city of Gaudi", "image": "https://picsum.photos/id/56/2880/1920" },
-    { "id": "london", "name": "London", "description": "The city of the queen", "image": "https://picsum.photos/id/58/1920/1080" },
-];
+function to_trip(data: any): Trip {
+    return {
+        id: data.trip_id,
+        city: data.city,
+        departureDate: data.departure_date,
+        returnDate: data.return_date,
+        description: data.description,
+        image: data.image
+    };
+}
 
 export async function getTrips(): Promise<Trip[]> {
-    return trips;
+    return fetch(TRIPS_URL)
+        .then(response => response.json())
+        .then(data => data.trips)
+        .then(trips => trips.map(to_trip));
 }

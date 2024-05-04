@@ -13,12 +13,12 @@ function MainPage({ navigation }) {
         getTrips().then((trips) => {
             setTrips(trips);
         });
-    });
+    }, []);
 
     return (
         <View>
-            <Section title="Available trips" />
-            <ScrollView>
+            <Section title="Upcoming trips" />
+            <ScrollView style={{ marginTop: 10 }}>
                 {trips.map((trip, index) => (
                     <TripCard key={index} trip={trip} navigation={navigation} />
                 ))}
