@@ -75,4 +75,4 @@ def search_places_endpoint():
     places = df_places.to_dict(orient='records')
     return jsonify(places)
     
-app.run()
+app.run(debug=True, port=5001)  # Cambio a puerto 5001
