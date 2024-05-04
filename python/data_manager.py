@@ -56,6 +56,47 @@ class DataManager:
         #check if dates match
         overlap_trips = self.calculate_overlap(trip, all_trips_to_city)
         return overlap_trips
+    
+    def add_trip(self, traveller_name, departure_date, return_date, departure_city, arrival_city):
+        # Convert dates to the correct format
+        departure_date = datetime.strptime(departure_date, '%d/%m/%Y').strftime('%d/%m/%Y')
+        return_date = datetime.strptime(return_date, '%d/%m/%Y').strftime('%d/%m/%Y')
+
+        # Generate a unique Trip ID
+        trip_id = self.data['Trip ID'].max() + 1 if not self.data.empty else 1
+
+        # Create a dictionary for the new trip
+        new_trip = pd.DataFrame( {
+            'Trip ID': [trip_id],
+            'Traveller Name': [traveller_name],
+            'Departure Date': [departure_date],
+            'Return Date': [return_date],
+            'Departure City': [departure_city],
+            'Arrival City': [arrival_city]
+        })
+
+        print("new trip that should be added")
+        print(new_trip)
+
+        # Append the new trip to the DataFrame
+        self.data = pd.concat([self.data, new_trip])
+
+        # Optionally, you can write the DataFrame back to the CSV file
+        # self.data.to_csv('updated_trips.csv', index=False)
+    
+    def remove_trip_by_id(self, trip_id):
+        # Find the index of the trip with the given ID
+        index = self.data[self.data['Trip ID'] == trip_id].index
+
+        # Check if trip with the given ID exists
+        if not index.empty:
+            # Remove the trip from the DataFrame
+            self.data = self.data.drop(index)
+
+            print(f"Trip with ID {trip_id} removed successfully.")
+        else:
+            print(f"No trip found with ID {trip_id}.")
+
         
     
 
