@@ -1,23 +1,26 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import Section from 'src/modules/Section';
-import TripCard from 'src/modules/TripCard'
+import TripCard from 'src/modules/TripCard';
 
-const cards = [
-    { "title": "Card 1", "description": "Description 1", "image": "https://picsum.photos/id/54/367/267" },
-    { "title": "Card 2", "description": "Description 2", "image": "https://picsum.photos/id/56/2880/1920" },
-];
+import { Trip, getTrips } from 'src/modules/infrastructure/Trips';
 
-function MainPage() {
+function MainPage({ navigation }) {
+    const [trips, setTrips] = React.useState([] as Trip[]);
+
+    React.useEffect(() => {
+        getTrips().then((trips) => {
+            setTrips(trips);
+        });
+    });
+
     return (
         <View>
-            <Section title="Introduction">
-                HackUPC introduction text.
-            </Section>
+            <Section title="Available trips" />
             <ScrollView>
-                {cards.map((card, index) => (
-                    <TripCard key={index} title={card.title} description={card.description} imageUri={card.image} />
+                {trips.map((trip, index) => (
+                    <TripCard key={index} trip={trip} navigation={navigation} />
                 ))}
             </ScrollView>
         </View>
