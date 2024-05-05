@@ -5,7 +5,8 @@ import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import TripDetail from 'src/pages/TripDetail';
-import TripOverlaps from './TripOverlaps';
+import TripOverlaps from 'src/pages/TripOverlaps';
+import TripMap from 'src/pages/TripMap';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,9 @@ function TripPage({ route, navigation }) {
             </Tab.Screen>
             <Tab.Screen name="Networking">
                 {() => <TripOverlaps trip={trip} />}
+            </Tab.Screen>
+            <Tab.Screen name="Map">
+                {() => <TripMap trip={trip} />}
             </Tab.Screen>
         </ Tab.Navigator>
     );
