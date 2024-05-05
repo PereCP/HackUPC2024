@@ -50,7 +50,7 @@ function TripEvents({ trip }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.header}>Upcoming Events in {trip.city}</Text>
+            <Text style={styles.header}> Events for these days in {trip.city}</Text>
             {loading ? (
                 <View style={styles.loadingContainer}>
                     <Image 

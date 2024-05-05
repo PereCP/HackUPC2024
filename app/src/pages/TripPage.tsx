@@ -28,26 +28,30 @@ function TripPage({ route }) {
         <SafeAreaView style={styles.container}>
             {renderComponent()}
             <View style={styles.navBar}>
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => setActive('Info')}>
-                    <Text style={styles.buttonText}>Info</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => setActive('Networking')}>
-                    <Text style={styles.buttonText}>Networking</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => setActive('Events')}>
-                    <Text style={styles.buttonText}>Events</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => setActive('Map')}>
-                    <Text style={styles.buttonText}>Map</Text>
-                </TouchableOpacity>
+                <View style={[styles.row, styles.rowSpacing]}>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => setActive('Info')}>
+                        <Text style={styles.buttonText}>Info</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => setActive('Networking')}>
+                        <Text style={styles.buttonText}>Networking</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => setActive('Events')}>
+                        <Text style={styles.buttonText}>Events</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.row}>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => setActive('Map')}>
+                        <Text style={styles.buttonText}>Map</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </SafeAreaView>
     );
@@ -58,22 +62,25 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     navBar: {
+        position: 'absolute',
+        bottom: 90,
+        width: '100%',
+        backgroundColor: 'transparent',
+        paddingHorizontal: 25,
+    },
+    row: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        position: 'absolute',  // Posición absoluta para mantener los botones siempre visibles
-        bottom: 0,             // Alinea la barra de navegación en la parte inferior de la pantalla
-        width: '100%',         // Asegura que la barra se extienda a lo largo de toda la pantalla
-        backgroundColor: 'transparent',
-        paddingVertical: 60,
-        paddingHorizontal: 30,
+    },
+    rowSpacing: {
+        marginBottom: 15, // Espacio entre filas
     },
     button: {
-        backgroundColor: '#d9d9d9',
+        backgroundColor: '#003097',
         paddingHorizontal: 20,
         paddingVertical: 12,
         borderRadius: 30,
         marginRight: 15,
-        // Añade estas líneas para la sombra
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -84,12 +91,10 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     buttonText: {
-        color: 'black',
+        color: 'white',
         fontWeight: 'bold',
         fontSize: 18,
     },
 });
 
 export default TripPage;
-
-
