@@ -2,8 +2,14 @@ from flask import Flask, request, jsonify
 import pandas as pd
 from api.hqAPIacces import *
 from placeDataGenerator import *
+from datetime import datetime
 
 app = Flask(__name__)
+
+def formatear_fecha(fecha):
+    """Convierte la fecha a formato ISO para su uso en la API."""
+    fecha_dt = datetime.strptime(fecha, "%d/%m/%Y")  # Ajusta el formato de entrada según sea necesario
+    return fecha_dt.strftime("%Y-%m-%d")
 
 df_cities = pd.read_csv('data/cities.csv')
 df_travels = pd.read_csv('data/travels.csv')
@@ -47,16 +53,20 @@ def eventos_endpoint():
     fecha_inicio = request.args.get('fecha_inicio')
     fecha_fin = request.args.get('fecha_fin')
     access_token = 'efqtARp36tMmH3YnFnvfUTEbeGd4JxvC6C7WSf5w'
+
+    # Convertir fechas a formato ISO
+    # fecha_inicio = formatear_fecha(fecha_inicio)
+    # fecha_fin = formatear_fecha(fecha_fin)
     
     try:
         lat, lon = obtener_coordenadas(ciudad)
         eventos = obtener_eventos(lat, lon, fecha_inicio, fecha_fin, access_token)
         eventos_procesados = [{
             "Evento": evento['title'],
-            "Descripción": evento['description'],
-            "Categoría": evento['category'],
-            "Fecha de inicio": formatear_fecha(evento['start']),
-            "Ubicación": evento['entities'][0]['formatted_address'] if evento['entities'] else 'No especificado',
+            "Descripcion": evento['description'],
+            "Categoria": evento['category'],
+            "Fecha": formatear_fecha(evento['start']),
+            "Ubicacion": evento['entities'][0]['formatted_address'] if evento['entities'] else 'No especificado',
             "Relevancia": evento['relevance']
         } for evento in eventos]
         return jsonify(eventos_procesados)

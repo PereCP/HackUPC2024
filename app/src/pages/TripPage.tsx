@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, SafeAreaView } from 'react-native';
 import TripDetail from 'src/pages/TripDetail';
 import TripOverlaps from './TripOverlaps';
+import TripEvents from './TripEvents';
 
 function TripPage({ route }) {
     const { trip } = route.params;
@@ -13,6 +14,8 @@ function TripPage({ route }) {
                 return <TripDetail trip={trip} />;
             case 'Networking':
                 return <TripOverlaps trip={trip} />;
+            case 'Events':
+                return <TripEvents trip={trip} />;
             default:
                 return null;
         }
@@ -31,6 +34,11 @@ function TripPage({ route }) {
                     style={styles.button}
                     onPress={() => setActive('Networking')}>
                     <Text style={styles.buttonText}>Networking</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.button} 
+                    onPress={() => setActive('Events')}>
+                    <Text style={styles.buttonText}>Events</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
