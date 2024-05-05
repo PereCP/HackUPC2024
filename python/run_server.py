@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 import pandas as pd
 from api.hqAPIacces import *
 from placeDataGenerator import *
@@ -12,6 +12,7 @@ df_cities = pd.read_csv('data/cities.csv')
 df_travels = pd.read_csv('data/travels.csv')
 df_users = pd.read_csv('data/users.csv')
 dmTrips = DataManager('data/travels.csv')
+df_cities_count = pd.read_csv('data/citiesPepoleCount.csv',parse_dates=['Date'])
 
 @app.route('/get_events')
 def get_events():
@@ -86,7 +87,7 @@ def get_person_profilepic_endpoint():
     name = request.args.get('name')
     profile_pics = os.listdir('data/profilePics')
     random_pic = random.choice(profile_pics)
-    return {'profile_pic': f'data/profilePics/{random_pic}'}
+    return send_file(f'data/profilePics/{random_pic}', mimetype='image/png')
     
 @app.route('/get_overlapped_people', methods=['GET'])
 def get_overlapped_people_endpoint():
@@ -96,5 +97,37 @@ def get_overlapped_people_endpoint():
     
     trips = dmTrips.get_overlapped_trips_as_trip(trip_id)
     return trips.to_dict(orient='records')
-    
+
+@app.route('/get_cities_pepole', methods=['GET'])
+def get_cities_people():
+    # Load the dataset and parse the 'Date' column as datetime objects
+
+    # Get the iterator parameter from the request
+    iterator = request.args.get('iterator')
+
+    # If iterator is not provided or not a valid number, set it to 1
+    if iterator is None or not iterator.isdigit():
+        iterator = '1'
+
+    # Define the base date index
+    base_date_index = int(iterator) - 1
+
+    # Convert start_date to datetime object
+    start_date = pd.to_datetime(df_cities_count['Date'].iloc[base_date_index])
+
+    # Calculate the end date by adding 100 days to the start date
+    end_date = start_date + pd.Timedelta(days=100)
+
+    # Select the date range from base date to base date + 100 days
+    selected_df = df_cities_count[(df_cities_count['Date'] >= start_date) & (df_cities_count['Date'] < end_date)]
+
+    selected_df['Date'] = selected_df['Date'].dt.strftime('%d-%m-%Y')
+    # Pivot the DataFrame to have cities as columns
+    pivoted_df = selected_df.pivot(index='Date', columns='City', values='Visitors').fillna(0)
+
+    # Convert DataFrame to JSON using records orientation
+    result_json = pivoted_df.reset_index().to_dict(orient='records')
+
+    return jsonify(result_json)
+
 app.run(debug=True, port=5001)  # Cambio a puerto 5001
