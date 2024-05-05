@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
     image: {
         height: 200,
         overflow: "hidden",
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+
     }
 });
 
