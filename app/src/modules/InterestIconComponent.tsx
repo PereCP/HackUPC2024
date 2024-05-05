@@ -7,22 +7,36 @@ interface InterestIconProps {
 }
 
 const getIconName = (interest: string): string => {
-    switch (interest.toLowerCase()) {
-        case 'music':
-            return 'music';
-        case 'art':
-            return 'paint-brush';
-        case 'sports':
-            return 'soccer-ball-o';
-        case 'technology':
-            return 'laptop';
-        case 'museums':
-            return 'institution';
-        case 'food':
+    switch (interest) {
+        case "Travel":
+            return 'plane';
+        case "Cooking":
             return 'cultery';
+        case "Sports":
+            return 'soccer-ball-o';
+        case "Art":
+            return 'paint-brush';
+        case "Reading":
+            return 'book';
+        case "Technology":
+            return 'laptop';
+        case "Music":
+            return 'music';
+        case "Volunteering":
+            return 'hand-peace-o';
+        case "Fitness":
+            return 'gamepad';
+        case "Crafts":
+            return 'wrench';
+        case "Environment":
+            return 'globe';
+        case "Movies/TV Shows":
+            return 'film';
+        case "Pets":
+            return 'paw';
         default:
-            return 'question'; // Default icon if no match is found
-    }
+            return 'help';
+    };
 };
 
 const InterestIconComponent: React.FC<InterestIconProps> = ({ interests }) => {
