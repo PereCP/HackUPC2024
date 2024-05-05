@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     tripCard: {
         flex: 1,
         margin: 10,
-        backgroundColor: 'white',
+        backgroundColor: '#FFFF',
         borderRadius: 20,
         alignContent: 'center',
         flexDirection: 'row',
