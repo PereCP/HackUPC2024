@@ -118,6 +118,7 @@ def get_overlapped_people_endpoint():
 
 @app.route('/get_cities_people', methods=['GET'])
 def get_cities_people():
+    global df_cities
     # Load the dataset and parse the 'Date' column as datetime objects
 
     # Get the iterator parameter from the request
@@ -143,8 +144,15 @@ def get_cities_people():
     # Pivot the DataFrame to have cities as columns
     pivoted_df = selected_df.pivot(index='Date', columns='City', values='Visitors').fillna(0)
 
+    result_df = pd.DataFrame(pivoted_df.iloc[int(iterator)]).reset_index()
+    result_df.columns = ['City', 'Visitors']
+
+    result_df = result_df.merge(df_cities, on='City', how='left')
+
+    result_df = result_df[['CoordsLong', 'CoordsLat', 'Visitors']]
+
     # Convert DataFrame to JSON using records orientation
-    result_json = pivoted_df.reset_index().to_dict(orient='records')
+    result_json = result_df.to_dict(orient='records')
 
     return jsonify(result_json)
 
