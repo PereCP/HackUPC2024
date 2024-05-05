@@ -1,4 +1,5 @@
 import { SERVER_URL } from "src/modules/infrastructure/Urls";
+import { TripLocations } from "src/modules/infrastructure/Location";
 
 const TRIPS_URL = `${SERVER_URL}/get_trips?traveller_name=AndersonHudson`;
 
@@ -9,6 +10,7 @@ export type Trip = {
     returnDate: string;
     description: string;
     image: string;
+    locations: TripLocations;
 };
 
 function to_trip(data: any): Trip {
@@ -18,7 +20,15 @@ function to_trip(data: any): Trip {
         departureDate: data.departure_date,
         returnDate: data.return_date,
         description: data.description,
-        image: data.image
+        image: data.image,
+        locations: {
+            hotel: {
+                /*                 latitude: data.hotel_location.latitude,
+                                longitude: data.hotel_location.longitude, */
+                latitude: 59.32176779741241,
+                longitude: 17.886907805793033
+            },
+        },
     };
 }
 
