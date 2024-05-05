@@ -25,10 +25,9 @@ def get_events():
 @app.route('/get_trips')
 def get_trips():
     global df_cities, df_travels
-    df_trips = df_cities[['City', 'Image']]
+    df_trips = df_cities[['City', 'Image', 'Description']]
     df_trips['id'] = df_trips['City'].apply(lambda x: x.lower())
-    df_trips = df_trips.rename(columns={'City': 'city', 'Image': 'image'})
-    df_trips['description'] = "This is a description of the city."
+    df_trips = df_trips.rename(columns={'City': 'city', 'Image': 'image', 'Description': 'description'})
 
     traveller_name = request.args.get('traveller_name')
     df_travels_user = df_travels.rename(columns={
