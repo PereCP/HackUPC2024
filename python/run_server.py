@@ -130,4 +130,4 @@ def get_cities_people():
 
     return jsonify(result_json)
 
-app.run(debug=True, port=5001)  # Cambio a puerto 5001
+app.run(debug=True, host="0.0.0.0", port=5001)  # Cambio a puerto 5001
