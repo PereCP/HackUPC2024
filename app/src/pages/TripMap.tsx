@@ -92,6 +92,8 @@ function TripMap({ trip }) {
         }
     }, [mapStatus]);
 
+    console.log('TripMap', mapStatus);
+
     return (
         <View>
             <Section title="Trip map" />
