@@ -109,9 +109,14 @@ def get_overlapped_people_endpoint():
     trip_id = request.args.get('trip_id')
     
     trips = dmTrips.get_overlapped_trips_as_trip(trip_id)
+    trips['Interests'] =\
+        trips[['Interest1', 'Interest2', 'Interest3', 'Interest4', 'Interest5']].values.tolist()
+    trips = trips.drop(columns=['Interest1', 'Interest2', 'Interest3', 'Interest4', 'Interest5'])
+    trips.columns = trips.columns.str.replace(' ', '')
+    trips['ProfilePicture'] = '1'
     return trips.to_dict(orient='records')
 
-@app.route('/get_cities_pepole', methods=['GET'])
+@app.route('/get_cities_people', methods=['GET'])
 def get_cities_people():
     # Load the dataset and parse the 'Date' column as datetime objects
 

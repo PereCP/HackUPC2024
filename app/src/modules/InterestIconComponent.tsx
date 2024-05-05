@@ -21,19 +21,19 @@ const getIconName = (interest: string): string => {
         case 'food':
             return 'cultery';
         default:
-            return 'help'; // Default icon if no match is found
+            return 'question'; // Default icon if no match is found
     }
 };
 
 const InterestIconComponent: React.FC<InterestIconProps> = ({ interests }) => {
     return (
         <ScrollView horizontal={true} style={styles.container}>
-            {interests.map((interest, index) => (
+            {interests.map((interest, index) => interest != 'N/A' ? (
                 <View key={index} style={styles.interestItem}>
                     <FontAwesome name={getIconName(interest)} size={24} color="#333" />
                     {/* <Text style={styles.interestText}>{interest}</Text> */}
                 </View>
-            ))}
+            ) : null)}
         </ScrollView>
     );
 };
