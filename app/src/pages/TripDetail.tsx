@@ -1,7 +1,16 @@
 import React, { useState } from "react";
-import { View, Image, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, Image, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
 
 import Section from "src/modules/Section";
+import TripCard from "src/modules/TripCard";
+import PlaceCard from "src/modules/PlaceCard";
+
+const places = [
+    {name: "Place 1", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
+    {name: "Place 2", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
+    {name: "Place 3", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
+    {name: "Place 4", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
+];
 
 const styles = StyleSheet.create({
   image: {
@@ -57,6 +66,13 @@ function TripDetail({ trip }) {
           </TouchableOpacity>
         )}
       </Section>
+      
+      <ScrollView>
+        {places.map((place, index) => (
+            <PlaceCard key={index} place={place} />
+        ))}
+        
+      </ScrollView>
     </View>
   );
 }

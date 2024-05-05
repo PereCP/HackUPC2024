@@ -29,7 +29,7 @@ function TripOverlaps({ trip }) {
 
     return (
         <View>
-            <Section title="Nearest users" />
+            <Section title="Connect with companions" />
             <ScrollView>
                 {overlapPeople.map((overlap, index) => (
                     <TripOverlap key={index} {...overlap} />

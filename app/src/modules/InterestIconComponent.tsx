@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
@@ -6,12 +6,17 @@ interface InterestIconProps {
     interests: string[];
 }
 
+function getRandomInt(min, max) {
+    // Ensure the min and max are inclusive by adding 1 to the difference
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const getIconName = (interest: string): string => {
     switch (interest) {
         case "Travel":
             return 'plane';
         case "Cooking":
-            return 'cultery';
+            return 'cutlery';
         case "Sports":
             return 'soccer-ball-o';
         case "Art":
@@ -35,9 +40,13 @@ const getIconName = (interest: string): string => {
         case "Pets":
             return 'paw';
         default:
-            return 'help';
+            const randomNum = getRandomInt(1, 10);
+            const options = [ 'glass', 'car', 'rocket', 'leaf', 'shopping-cart' ]
+            return options[randomNum];
     };
 };
+
+// paw, globe, plane, music, book, futbol, laptop, movie, gaming, paint, wrench, peace, cutlery
 
 const InterestIconComponent: React.FC<InterestIconProps> = ({ interests }) => {
     return (

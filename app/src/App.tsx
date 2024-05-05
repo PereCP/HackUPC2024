@@ -30,7 +30,7 @@ function App(): React.JSX.Element {
             headerTitle: () => (
               <Image
                 source={{ uri: 'https://i.imgur.com/TmzyRhO.png' }}
-                style={{ width: 130, height: 40 }} // Adjust size as needed
+                style={{ width: 130, height: 50 }} // Adjust size as needed
                 resizeMode="contain"
               />
             ),
