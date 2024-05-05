@@ -7,7 +7,7 @@ interface InterestIconProps {
 }
 
 const getIconName = (interest: string): string => {
-    switch (interest.toLowerCase()) {
+    switch (interest) {
         case "Travel":
             return 'plane';
         case "Cooking":
