@@ -6,16 +6,17 @@ interface TripOverlapProps {
     name: string;
     profilePicture: string;
     interests: string[];
-    overlapDays: string[];
+    overlapDayStart: string;
+    overlapDayEnd: string;
 }
 
-const TripOverlapComponent = ({ name, profilePicture, interests, overlapDays }: TripOverlapProps) => {
+const TripOverlapComponent = ({ name, profilePicture, interests, overlapDayStart, overlapDayEnd }: TripOverlapProps) => {
     return (
         <View style={styles.container}>
             <View style={styles.textContainer}>
                 <Text style={styles.name}>{name}</Text>
                 <InterestIconComponent interests={interests} />
-                <Text style={styles.overlap}>From: {overlapDays[0] + " to " + overlapDays[1]}</Text>
+                <Text style={styles.overlap}>From: {overlapDayStart + " to " + overlapDayEnd}</Text>
             </View>
             <Image source={{ uri: profilePicture }} style={styles.profileImage} />
         </View>
