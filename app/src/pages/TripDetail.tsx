@@ -5,12 +5,7 @@ import Section from "src/modules/Section";
 import TripCard from "src/modules/TripCard";
 import PlaceCard from "src/modules/PlaceCard";
 
-const places = [
-    {name: "Place 1", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
-    {name: "Place 2", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
-    {name: "Place 3", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
-    {name: "Place 4", rating: "4.2", image: "https://lh3.googleusercontent.com/places/ANXAkqFpPGU25CxwHb8IgUuGeDUmK5CUV1g7jYIKInBbnDLIfzLwnJg5kp5SiZ-EPEZUDDtMk2npDbXeHPmanYebh-NZYQKUqZUVyAQ=s1600-w400-h400"},
-];
+import { Place, getPlaces } from "src/modules/infrastructure/Place";
 
 const styles = StyleSheet.create({
   image: {
@@ -38,17 +33,31 @@ const styles = StyleSheet.create({
   expandButtonText: {
     color: "#003097",
   },
+  loadingContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  loadingImage: {
+    width: 50,
+    height: 50,
+  }
 });
 
 function TripDetail({ trip }) {
   const [expanded, setExpanded] = useState(false);
+  const [places, setPlaces] = useState<Place[]>([]);
+
+  React.useEffect(() => {
+    getPlaces(trip.city).then(setPlaces);
+  }, []);
 
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <View>
+    <ScrollView>
       <Image source={{ uri: trip.image }} style={styles.image} resizeMode="stretch" />
       <Section title={trip.city} style={styles.city}>
         <TouchableOpacity onPress={toggleExpand}>
@@ -66,14 +75,25 @@ function TripDetail({ trip }) {
           </TouchableOpacity>
         )}
       </Section>
-      
-      <ScrollView>
-        {places.map((place, index) => (
-            <PlaceCard key={index} place={place} />
-        ))}
-        
-      </ScrollView>
-    </View>
+
+      <Section title={`Restaurants in ${trip.city}`}></Section>
+
+      {places.map((place, index) => (
+        <PlaceCard key={index} place={place} />
+      ))}
+
+      {
+        places.length === 0 && (
+          <View style={styles.loadingContainer}>
+            <Image
+              source={{ uri: "https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" }}
+              style={styles.loadingImage}
+            />
+          </View>
+        )
+      }
+
+    </ScrollView>
   );
 }
 
