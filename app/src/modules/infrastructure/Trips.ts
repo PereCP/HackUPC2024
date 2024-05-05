@@ -36,5 +36,9 @@ export async function getTrips(): Promise<Trip[]> {
     return fetch(TRIPS_URL)
         .then(response => response.json())
         .then(data => data.trips)
-        .then(trips => trips.map(to_trip));
+        .then(trips => trips.map(to_trip))
+        .catch((error) => {
+            console.error('Error:', error);
+            return [];
+        });
 }
