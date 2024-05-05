@@ -44,7 +44,7 @@ function GlobeMap() {
 
     // Function to convert the number of people to a proportional radius
     const calculateRadius = (numPeople) => {
-        const baseRadius = 100; // Minimum radius
+        const baseRadius = 1000; // Minimum radius
         const scaleFactor = 5000; // Adjust to scale proportionately
         return baseRadius + numPeople * scaleFactor;
     };
