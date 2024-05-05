@@ -97,4 +97,4 @@ def get_overlapped_people_endpoint():
     trips = dmTrips.get_overlapped_trips_as_trip(trip_id)
     return trips.to_dict(orient='records')
     
-app.run()
+app.run(debug=True, port=5001)  # Cambio a puerto 5001
