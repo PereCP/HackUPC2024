@@ -2,11 +2,16 @@ from flask import Flask, request, jsonify
 import pandas as pd
 from api.hqAPIacces import *
 from placeDataGenerator import *
+from pepoleOverlapping import *
+import os
+import random
 
 app = Flask(__name__)
 
 df_cities = pd.read_csv('data/cities.csv')
 df_travels = pd.read_csv('data/travels.csv')
+df_users = pd.read_csv('data/users.csv')
+dmTrips = DataManager('data/travels.csv')
 
 @app.route('/get_events')
 def get_events():
@@ -74,5 +79,22 @@ def search_places_endpoint():
     df_places= pd.read_csv(f'data/places/{city}_{place_type}.csv')
     places = df_places.to_dict(orient='records')
     return jsonify(places)
+
+@app.route('/get_person_profilepic')
+def get_person_profilepic_endpoint():
+    global df_users
+    name = request.args.get('name')
+    profile_pics = os.listdir('data/profilePics')
+    random_pic = random.choice(profile_pics)
+    return {'profile_pic': f'data/profilePics/{random_pic}'}
+    
+@app.route('/get_overlapped_people', methods=['GET'])
+def get_overlapped_people_endpoint():
+    #name = request.args.get('name')
+    global dmTrips, df_users
+    trip_id = request.args.get('trip_id')
+    
+    trips = dmTrips.get_overlapped_trips_as_trip(trip_id)
+    return trips.to_dict(orient='records')
     
 app.run()
